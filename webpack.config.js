@@ -92,16 +92,12 @@ module.exports={
   devServer:{
     compress:true,
     contentBase:path.join(__dirname,'dist'),
-    port: 6600
+    port: 6600,
+    stats:{
+      colors:true,
+      hash:true
+    }
   }
 
-  // devServer: {
-  //   compress: true,
-  //   contentBase: path.join(__dirname, 'dist'),
-  //   port: 6600,
-  //   stats: {
-  //     colors: true,
-  //     hash: true,
-  //   }
-  // }
+
 }

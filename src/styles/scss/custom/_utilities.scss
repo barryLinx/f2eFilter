@@ -1,0 +1,30 @@
+$utilities:map-merge(
+  $utilities,
+  (
+    'object-fit': (
+      property: object-fit,
+      class: object,
+      values: (
+        contain,
+        cover,
+        fill,
+        none,
+        scale-down,
+      ),
+    ),    
+    'letter-spacing':(
+      property:'letter-spacing',
+      class:ls,
+      responsive:true,
+      values:$letter-space-sizes      
+    )
+    // 'font-family': (
+    //   property: font-family,
+    //   class: font,
+    //   values: (        
+    //     display: $font-family-display,
+  
+    //   ),
+    // ),
+  )
+)

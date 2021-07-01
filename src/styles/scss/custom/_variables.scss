@@ -1,0 +1,47 @@
+$purple-dark:#7828B4;
+$purple-light:#9013FE;
+$gray-1:#F2F2F2;
+$gray-2:#EBEBEB;
+$gray-3:#D7D7D7;
+$gray-4:#9B9B9B;
+
+// theme-color-variables
+$primary:$purple-light;
+$secondary: $purple-dark;
+
+
+// font-variables
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+// scss-docs-start font-sizes
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,           //24px
+  6: $h6-font-size,           //16px
+  7:$font-size-base * 2.25,   // 36px
+
+) !default;
+
+
+// font-variables
+
+$font-family-display:'Roboto', sans-serif;
+
+//letter-spacing
+$letter-space-base:1px;
+$letter-space-sizes:(
+  1:$letter-space-base,
+  2:$letter-space-base * 2,
+)

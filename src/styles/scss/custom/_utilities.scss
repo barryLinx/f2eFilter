@@ -50,7 +50,23 @@ $utilities:map-merge(
       property: text-decoration,
       class: text-decoration,
       values: (
-        none,
+        none:none,
+      ),
+    ),
+    'list-style': (
+      property: list-style,
+      class: list-style,
+      values: (
+        n:none,
+        c:circle,
+        s:square
+      ),
+    ),
+    'outline': (
+      property: outline,
+      class: outline,
+      values: (
+        0
       ),
     ),
     // 'font-family': (

@@ -1,21 +1,38 @@
 @mixin hideText {
-  display: block;
+  display:inline-block;
   text-indent: 110%;
   overflow: hidden;
   white-space: nowrap;
 }
+@mixin linear-background {
+  background: linear-gradient(0deg, rgba(120,40,180,1) 0%, rgba(144,19,254,1) 100%);
+}
 
 h1.logo{
-  width: 100vw;
-  height: 50px;
-  background-color:aquamarine;
-
+  //height: 50px;
   a{
-    height: 50px;
-    width: 140px;
+    height: 43px;
+    width: 250px;
     background: url("../../../assets/image/logo.png");
     background-size: cover;
     background-repeat: no-repeat;
     @include hideText;
+  }
+}
+
+header{
+  @include linear-background;
+}
+
+
+#searchText{
+  outline: none;
+  //text-decoration: none;
+  background-color: transparent;
+ 
+  &::placeholder{
+    color: $gray-3;
+    font-style: italic;
+    font-weight: bold;
   }
 }

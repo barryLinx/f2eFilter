@@ -1,6 +1,8 @@
+//import webpack from 'webpack';
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ASSET_PATH = process.env.ASSET_PATH || '../../../';
 
 module.exports={
   mode:process.env.NODE_ENV,
@@ -9,7 +11,8 @@ module.exports={
   },
   output:{
     path:path.resolve(__dirname,'dist'),   
-    filename: 'js/[name].js?[hsah:8]'
+    filename: 'js/[name].js?[hsah:8]',
+    //assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   optimization: {
     splitChunks: {
@@ -39,17 +42,53 @@ module.exports={
         }        
       },  
       {
+        test: /\.(png|jpe?g|gif)$/i,
+       // type: 'asset/resource'
+        use: [
+          // {
+          //   loader:'file-loader',
+          //  // loader: 'url-loader',
+          //   options: {
+          //     //limit:8892,
+          //     //fallback:require.resolve('file-loader'),
+          //     outputPath: 'image',
+          //     //name:'[path][name].[ext]',
+          //     name:'[name].[ext]',
+          //     //publicPath: 'assets',
+          //     //context: path.resolve(__dirname, "src/"),
+          //     //outputPath: '../../../',
+          //     //publicPath: '../../../',
+          //     //useRelativePaths: true
+          //   },
+          // },
+          {
+            loader:'url-loader',
+            options:{
+              limit:8892,
+              fallback:require.resolve('file-loader'),
+              name:'[name].[ext]',
+            }
+          }
+        ],
+      },
+      {
         test: /\.s[ac]ss$/i,
         use: [
           {
             // inject CSS to page
-            loader: 'style-loader'
+            loader: 'style-loader', 
+            options:{
+             // publicPath: '../../../',
+             //sourceMap: true,
+            }          
           }
           , {
             // translates CSS into CommonJS modules
             loader: 'css-loader',
             options: {
               sourceMap: true,
+              //url: true,
+              
             },
           },
           {
@@ -69,6 +108,9 @@ module.exports={
             }
           },
           {
+            loader:'resolve-url-loader',
+          },
+          {
             loader: "sass-loader",
             options: {
               // Prefer `dart-sass`
@@ -76,9 +118,18 @@ module.exports={
             },
           }
         ]
-      }   
+      }
+    
     ]
   },
+  // resolve: {
+  //   alias: {
+  //     "/assets/image/logo.png": path.resolve(
+  //       __dirname,
+  //       "assets/image/logo.png"
+  //     ),
+  //   },
+  // },
   plugins:[
     new HtmlWebpackPlugin({
       title: 'filter-f2e',

@@ -1,0 +1,21 @@
+@mixin hideText {
+  display: block;
+  text-indent: 110%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+h1.logo{
+  width: 100vw;
+  height: 50px;
+  background-color:aquamarine;
+
+  a{
+    height: 50px;
+    width: 140px;
+    background: url("../../../assets/image/logo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include hideText;
+  }
+}

@@ -17,7 +17,41 @@ $utilities:map-merge(
       class:ls,
       responsive:true,
       values:$letter-space-sizes      
-    )
+    ),
+    'width': (
+      responsive: true,
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        vw:100vw
+      ),
+    ),
+    'height': (
+      responsive: true,
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        0: 0,
+        vh:100vh       
+      ),
+    ),
+    'text-decoration': (
+      property: text-decoration,
+      class: text-decoration,
+      values: (
+        none,
+      ),
+    ),
     // 'font-family': (
     //   property: font-family,
     //   class: font,

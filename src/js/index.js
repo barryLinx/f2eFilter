@@ -1,4 +1,5 @@
 import '../styles/scss/index.scss';
+import '../assets/image/logo.png';
 import { library } from '@fortawesome/fontawesome';
 import { faTimes,faMapMarker, faSearch,faPlus} from '@fortawesome/fontawesome-free-solid';
 import { faCalendarAlt } from '@fortawesome/fontawesome-free-regular';

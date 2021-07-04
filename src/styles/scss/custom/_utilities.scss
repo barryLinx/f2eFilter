@@ -28,9 +28,9 @@ $utilities:map-merge(
         75: 75%,
         100: 100%,
         auto: auto,
-        vw:100vw
+        220:220px       
       ),
-    ),
+     ),
     'height': (
       responsive: true,
       property: height,
@@ -42,15 +42,14 @@ $utilities:map-merge(
         100: 100%,
         auto: auto,
         0: 0,
-        vh:100vh,
-           
+        220:220px  
       ),
     ),
     'text-decoration': (
       property: text-decoration,
       class: text-decoration,
       values: (
-        none:none,
+        none,
       ),
     ),
     'list-style': (
@@ -68,6 +67,48 @@ $utilities:map-merge(
       values: (
         0
       ),
+    ),
+    'cursor':(
+      property:cursor,
+      class:cursor,
+      values:(
+       p:pointer
+      ),
+    ),
+    "background-color": (
+      property: background-color,
+      responsive:true,
+      class: bg,
+      values: map-merge(
+        $theme-colors,
+        (
+          "body": $body-bg,
+          "white": $white,
+          "transparent": transparent
+        )
+      )
+    ),
+    "border-color": (
+      property: border-color,
+      class: border,
+      responsive:true,
+      values: map-merge($theme-colors, ("white": $white))
+    ),
+    "color": (
+      property: color,
+      class: text,
+      responsive:true,
+      values: map-merge(
+        $theme-colors,
+        (
+          "white": $white,
+          "body": $body-color,
+          "muted": $text-muted,
+          "black-50": rgba($black, .5),
+          "white-50": rgba($white, .5),
+          "reset": inherit,
+        )
+      )
     ),
     // 'font-family': (
     //   property: font-family,

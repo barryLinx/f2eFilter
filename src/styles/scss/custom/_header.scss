@@ -13,26 +13,47 @@ h1.logo{
   a{
     height: 39px;
     width: 228px;
-    background: url("../../../assets/image/logo.png");
+    background: url("../../../assets/image/logo@2x.png");
     background-size: cover;
     background-repeat: no-repeat;
     @include hideText;
   }
 }
 
-header{
-  @include linear-background;
-}
+
+// header{
+//   //@include linear-background;
+// }
 
 
 #searchText{
   outline: none;
   //text-decoration: none;
   background-color: transparent;
- 
+  caret-color: $white;
+  font-size: 30px;
+  
   &::placeholder{
     color: $gray-3;
     font-style: italic;
     font-weight: bold;
+  }
+ 
+}
+
+
+@media only screen and (max-width: 425px) {
+  #searchText{
+    caret-color: $black;
+    &::placeholder{
+      color: $gray-4;     
+    }   
+  }  
+  h1.logo{    
+    a{  
+      height: 25px;
+      width: 150px;
+      background: url("../../../assets/image/logo.png");    
+    }
   }
 }

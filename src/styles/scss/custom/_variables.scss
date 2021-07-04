@@ -4,6 +4,7 @@ $gray-1:#F2F2F2;
 $gray-2:#EBEBEB;
 $gray-3:#D7D7D7;
 $gray-4:#9B9B9B;
+
 $gray-900: #212529 !default;
 
 
@@ -35,7 +36,8 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "gray-dark":  $gray-4,
-  "gray-light":  $gray-2,
+  "gray-light": $gray-2,
+  "gray-mid":   $gray-3
 ) !default;
 
 
@@ -74,4 +76,21 @@ $letter-space-base:1px;
 $letter-space-sizes:(
   1:$letter-space-base,
   2:$letter-space-base * 2,
-)
+);
+
+// scss-docs-start grid-breakpoints
+// $grid-breakpoints: (
+//   xs: 0,
+ 
+//   sm: 576px,
+//   md: 768px,
+//   lg: 992px,
+//   xl: 1200px,
+//   xxl: 1400px
+// ) !default;
+// scss-docs-end grid-breakpoints
+
+
+
+
+

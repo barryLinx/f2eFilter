@@ -4,10 +4,10 @@ import '../assets/image/photo1.jpg';
 import '../assets/image/photo2.jpg';
 import '../assets/image/photo3.jpg'
 import { library } from '@fortawesome/fontawesome';
-import { faTimes,faMapMarker, faSearch,faPlus} from '@fortawesome/fontawesome-free-solid';
+import { faTimes,faMapMarker, faSearch,faPlus,faAngleDoubleLeft,faAngleDoubleRight} from '@fortawesome/fontawesome-free-solid';
 import { faCalendarAlt } from '@fortawesome/fontawesome-free-regular';
 
-library.add(faTimes,faMapMarker,faSearch,faCalendarAlt,faPlus)
+library.add(faTimes,faMapMarker,faSearch,faCalendarAlt,faPlus,faAngleDoubleLeft,faAngleDoubleRight)
 
 import 'bootstrap/js/dist/collapse';
 //<i class="fas fa-times"></i>
@@ -15,3 +15,5 @@ import 'bootstrap/js/dist/collapse';
 //<i class="fas fa-search"></i>
 //<i class="far fa-calendar-alt"></i>
 //<i class="fas fa-plus"></i>
+//<i class="fas fa-angle-double-left"></i>
+//<i class="fas fa-angle-double-right"></i>
